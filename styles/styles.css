@@ -22,10 +22,6 @@ nav .slide_header {
   padding: 1.5em 0 1.5em 1em;
   max-width: 400px;
 }
-nav .slide_header p {
-  margin: 0.1em 0 0 0;
-  white-space: nowrap;
-}
 nav .slide_header input {
   -webkit-appearance: none;
   width: 100%;
@@ -137,6 +133,10 @@ section #array_container {
 }
 
 @media only screen and (min-width: 800px) {
+  nav .slide_header p {
+    margin: 0.1em 0 0 0;
+    white-space: nowrap;
+  }
   nav .algo_buttons {
     display: block !important;
   }

@@ -30,11 +30,6 @@ nav {
     padding: 1.5em 0 1.5em 1em;
     max-width: 400px;
 
-    p {
-      margin: .1em 0 0 0;
-      white-space: nowrap;
-    }
-
     input {
       -webkit-appearance: none;
       width: 100%;
@@ -170,6 +165,13 @@ section {
 @media only screen and (min-width: 800px) {
   nav {
     //background-color: deeppink; // TESTING ONLY - used to visualize media query breakpoints
+
+    .slide_header {
+      p {
+        margin: .1em 0 0 0;
+        white-space: nowrap;
+      }
+    }
 
     .algo_buttons {
       display: block !important;
