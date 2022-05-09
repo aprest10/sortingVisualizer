@@ -1,0 +1,204 @@
+// mobile-first design; all css designed for mobile until media queries for larger device adjustments
+
+$num: 6;
+$bg-dark: #2c3441;
+$bg-light: #fff8e2;
+$blue: #97beea;
+$green: #6fd08e;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+body {
+  background-color: $bg-light;
+}
+
+nav {
+  background-color: $bg-dark;
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap: 10%;
+
+  .slide_header {
+    display: block;
+    padding: 1.5em 0 1.5em 1em;
+    max-width: 400px;
+
+    p {
+      margin: .1em 0 0 0;
+      white-space: nowrap;
+    }
+
+    input {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 5px;
+      border-radius: 10px;
+      background: $bg-light;
+      outline: none;
+      margin: .7em 0;
+    }
+
+    input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: $blue;
+      cursor: pointer;
+    }
+
+    input::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: $blue;
+      cursor: pointer;
+    }
+
+    .slide_buttons {
+      padding: 2.5em 0 2.5em 0;
+      position: relative;
+
+      #create {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        white-space: nowrap;
+        position: absolute;
+        top: 1.5em;
+        left: 0;
+
+        &:hover {
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+
+      #reload {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &:hover {
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .btn_header {
+    display: block;
+    flex-direction: column;
+
+    .nav-header {
+      display: block;
+      padding: 1.5em 0 0 0;
+    }
+
+    .algo_buttons {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      grid-auto-flow: column;
+      justify-content: left;
+      padding: 2.5em 2em 0 0;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        outline: none;
+        padding: 0 1em .5em 0;
+
+        &:hover {
+          background-color: transparent;
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+
+      .btn_locked {
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+
+      .btn_selected {
+        background-color: transparent;
+        color: $green;
+      }
+
+      .btn_unselected {
+        &:hover {
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+
+  #array_container {
+    //background-color: $bg-light;
+    display: flex;
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  nav {
+    //background-color: deeppink; // TESTING ONLY - used to visualize media query breakpoints
+
+    .algo_buttons {
+      display: block !important;
+
+      button {
+        padding: 0 .5em 0 0;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1050px) {
+  nav {
+    //background-color: olivedrab; // TESTING ONLY - used to visualize media query breakpoints
+  }
+}
+@media only screen and (min-width: 1250px) {
+  nav {
+    //background-color: orangered; // TESTING ONLY - used to visualize media query breakpoints
+    display: grid;
+    grid-template-columns: 30% 50%;
+    column-gap: 20%;
+  }
+}
+@media only screen and (min-width: 1550px) {
+  nav {
+    //background-color: yellow; // TESTING ONLY - used to visualize media query breakpoints
+
+    .slide_header {
+      padding: 1.5em 0 1.5em 7em;
+    }
+  }
+}
